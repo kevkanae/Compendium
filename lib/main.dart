@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: SplashPage(),
     );
   }
@@ -29,23 +30,22 @@ class SplashPage extends StatefulWidget {
 //--------------------------------------------------------//
 
 class _SplashPageState extends State<SplashPage> {
-   @override
+  @override
   void initState() {
     super.initState();
     Timer(
         Duration(seconds: 4),
-        () => Navigator.of(context).pushReplacement(MaterialPageRoute(
-            builder: (BuildContext context) => Home())));
+        () => Navigator.of(context).pushReplacement(
+            MaterialPageRoute(builder: (BuildContext context) => Home())));
   }
 
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xff6c5b7b),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Image.asset('images/a.gif')
-          ],
+          children: [Image.asset('images/a.gif')],
         ),
       ),
     );
