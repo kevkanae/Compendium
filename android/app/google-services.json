@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1037396980263",
+    "firebase_url": "https://compendium-b5a14.firebaseio.com",
+    "project_id": "compendium-b5a14",
+    "storage_bucket": "compendium-b5a14.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1037396980263:android:93ab34d0691d15adb09402",
+        "android_client_info": {
+          "package_name": "com.example.compendium"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1037396980263-ejq3i4p8j0a5bkcve2a74onf1sl7b0te.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlM0WT9yUoCEinB4rOiMpi0VXkkLQgHE4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1037396980263-ejq3i4p8j0a5bkcve2a74onf1sl7b0te.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
