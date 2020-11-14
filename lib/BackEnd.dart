@@ -18,6 +18,7 @@ class OpenFDA {
       var response = await http.get(urlNDC);
       if (response.statusCode == 200) {
         jsonData = jsonDecode(response.body);
+        print(jsonData);
       } else {
         print(response.statusCode);
       }

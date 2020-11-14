@@ -3,14 +3,14 @@ import 'package:compendium/BackEnd.dart';
 import 'package:compendium/screens/Display.dart';
 import 'package:flutter/material.dart';
 
-//--------------------------------------------------------////--------------------------------------------------------//
+//--------------------------------------------------------//--//--------------------------------------------------------//
 
 class Search extends StatefulWidget {
   @override
   _SearchState createState() => _SearchState();
 }
 
-//--------------------------------------------------------////--------------------------------------------------------//
+//--------------------------------------------------------//--/--------------------------------------------------------//
 
 class _SearchState extends State<Search> {
   String drugName;
@@ -50,7 +50,9 @@ class _SearchState extends State<Search> {
                         ),
                       ),
                       onChanged: (val) {
-                        drugName = val;
+                        setState(() {
+                          drugName = val;
+                        });
                       },
                     ),
                     SizedBox(
