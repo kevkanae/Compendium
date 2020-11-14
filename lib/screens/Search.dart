@@ -13,7 +13,7 @@ class Search extends StatefulWidget {
 //--------------------------------------------------------////--------------------------------------------------------//
 
 class _SearchState extends State<Search> {
-  String query;
+  String drugName;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -50,7 +50,7 @@ class _SearchState extends State<Search> {
                         ),
                       ),
                       onChanged: (val) {
-                        query = val;
+                        drugName = val;
                       },
                     ),
                     SizedBox(
@@ -58,7 +58,7 @@ class _SearchState extends State<Search> {
                     ),
                     FlatButton(
                         onPressed: () {
-                          OpenFDA(query: query);
+                          OpenFDA(query: drugName);
                           Navigator.of(context).push(MaterialPageRoute(
                               builder: (BuildContext context) => Splash2()));
                         },
@@ -84,7 +84,7 @@ class _Splash2State extends State<Splash2> {
   void initState() {
     super.initState();
     Timer(
-        Duration(seconds: 4),
+        Duration(seconds: 5),
         () => Navigator.of(context).pushReplacement(
             MaterialPageRoute(builder: (BuildContext context) => Display())));
   }
