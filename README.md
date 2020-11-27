@@ -9,10 +9,13 @@ A new Flutter project, that is a search engine for medicinal drugs that displays
 | Firebase/Firestore Integration  | ✔  |
 | Login/Sign-Up  | ✔  |
 | 2 Seperate API Calls  | ✔  |
-| Data Display  | ❌  |
-| JSON Decode  | ❌  |
-| Use Firestore as DB  | ❌  |
+| Data Display  | ✔  |
+| JSON Decode  | ✔  |
+| Use Firestore as DB for Info | ❌  |
 | Code Refactors  | ❌  |
 | UI remake  | ❌  |
+
+Screenshots:
+
 
 
