@@ -4,18 +4,16 @@ A new Flutter project, that is a search engine for medicinal drugs that displays
 
 ## Project Milestones
 
-| Milestones  | Progress |
-| ------------- | ------------- |
-| Firebase/Firestore Integration  | ✔  |
-| Login/Sign-Up  | ✔  |
-| 2 Seperate API Calls  | ✔  |
-| Data Display  | ✔  |
-| JSON Decode  | ✔  |
-| Use Firestore as DB for Info | ❌  |
-| Code Refactors  | ❌  |
-| UI remake  | ❌  |
+| Milestones                     | Progress |
+| ------------------------------ | -------- |
+| Firebase/Firestore Integration | ✔        |
+| Login/Sign-Up                  | ✔        |
+| 2 Seperate API Calls           | ✔        |
+| Data Display                   | ✔        |
+| JSON Decode                    | ✔        |
+| Use Firestore as DB for Info   | ❌       |
+| Code Refactors                 | ❌       |
+| UI remake                      | ❌       |
 
 Screenshots:
-
-
-
+<img src="../extra/1.png">
