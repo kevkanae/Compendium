@@ -15,9 +15,9 @@ A new Flutter project, that is a search engine for medicinal drugs that displays
 | Code Refactors                 | ❌       |
 | UI remake                      | ❌       |
 
-Screenshots:
-<img src="https://github.com/kevkanae/compendium/blob/main/extra/1.png" width="300" height="550">  <img src="https://github.com/kevkanae/compendium/blob/main/extra/2.png" width="300" height="550">
-<img src="https://github.com/kevkanae/compendium/blob/main/extra/3.png" width="300" height="550">  <img src="https://github.com/kevkanae/compendium/blob/main/extra/4.png" width="300" height="550">
+### Screenshots:
+
+----
 <table>
     <tr>
       <td><img src="https://github.com/kevkanae/compendium/blob/main/extra/1.png" alt="App SS" width="300" height="550" /></td>
@@ -28,3 +28,4 @@ Screenshots:
       <td><img src="https://github.com/kevkanae/compendium/blob/main/extra/4.png" alt="App SS" width="300" height="550" /></td>
     </tr>
   </table>
+----
