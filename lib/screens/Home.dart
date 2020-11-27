@@ -44,7 +44,6 @@ class _HomeState extends State<Home> {
                         style: TextStyle(
                           color: Colors.white,
                         ),
-
                         onChanged: (val) {
                           userEmail = val;
                         },
@@ -55,10 +54,10 @@ class _HomeState extends State<Home> {
                         height: MediaQuery.of(context).size.height * .02,
                       ),
                       TextField(
+                        obscureText: true,
                         style: TextStyle(
                           color: Colors.white,
                         ),
-
                         onChanged: (val) {
                           userPass = val;
                         },

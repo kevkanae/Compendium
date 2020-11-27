@@ -7,7 +7,7 @@ var data;
 var data1;
 var decoded;
 var decoded1;
-List a;
+List<dynamic> mainInfo;
 
 class Display extends StatefulWidget {
   final Response displayResponse;
@@ -28,37 +28,37 @@ class _DisplayState extends State<Display> {
     decoded1 = jsonDecode(data1);
 
     //NDC Data from decoded
-    String drugName = decoded["results"][0]["generic_name"];
-    String dosageForm = decoded["results"][0]["dosage_form"];
-    String brandName = decoded["results"][0]["brand_name"];
-    String route = decoded["results"][0]["route"];
-    String pharmClass = decoded["results"][0]["pharm_class"];
-    String labelerName = decoded["results"][0]["labeler_name"];
-    String productType = decoded["results"][0]["product_type"];
+    var drugName = decoded["results"][0]["generic_name"];
+    var dosageForm = decoded["results"][0]["dosage_form"];
+    var brandName = decoded["results"][0]["brand_name"];
+    var route = decoded["results"][0]["route"];
+    var pharmClass = decoded["results"][0]["pharm_class"];
+    var labelerName = decoded["results"][0]["labeler_name"];
+    var productType = decoded["results"][0]["product_type"];
 
     //Label Data from decoded1
-    String description = decoded1["results"][0]["description"];
-    String pediatricUse = decoded1["results"][0]["pediatric_use"];
-    String geriatricUse = decoded1["results"][0]["geriatric_use"];
-    String drugInteractions = decoded1["results"][0]["drug_interactions"];
-    String contraindications = decoded1["results"][0]["contraindications"];
-    String infoForPatients = decoded1["results"][0]["information_for_patients"];
-    String overDosage = decoded1["results"][0]["overdosage"];
+    var description = decoded1["results"][0]["description"];
+    var pediatricUse = decoded1["results"][0]["pediatric_use"];
+    var geriatricUse = decoded1["results"][0]["geriatric_use"];
+    var drugInteractions = decoded1["results"][0]["drug_interactions"];
+    var contraindications = decoded1["results"][0]["contraindications"];
+    var infoForPatients = decoded1["results"][0]["information_for_patients"];
+    var overDosage = decoded1["results"][0]["overdosage"];
 
-    a = [
+    mainInfo = [
       brandName,
-      drugName,
+      'Generic Name:  $drugName',
       labelerName,
       productType,
       pharmClass,
-      route,
+      'Administration Route:  $route',
       description,
       pediatricUse,
       geriatricUse,
       drugInteractions,
       contraindications,
       infoForPatients,
-      dosageForm,
+      'Dosage Form:  $dosageForm',
       overDosage
     ];
     super.initState();
@@ -74,12 +74,17 @@ class _DisplayState extends State<Display> {
         title: Text('C O M P E N D I U M'),
       ),
       body: ListView.builder(
-        itemCount: a.length,
+        itemCount: mainInfo.length,
         itemBuilder: (BuildContext context, int i) {
           return ListTile(
-            title: Text(
-              a[i] != null ? a[i] : 'Re-enter Drug Name',
-              style: TextStyle(color: Colors.white),
+            title: Card(
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text(
+                  '${mainInfo[i]}' ?? 'Data N/A',
+                  style: TextStyle(color: Colors.black, fontSize: 20),
+                ),
+              ),
             ),
           );
         },
