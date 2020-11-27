@@ -47,6 +47,10 @@ class _SignUpState extends State<SignUp> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     TextField(
+                      style: TextStyle(
+                        color: Colors.white,
+                      ),
+
                       onChanged: (val) {
                         userName = val;
                       },
@@ -57,6 +61,10 @@ class _SignUpState extends State<SignUp> {
                       height: MediaQuery.of(context).size.height * .02,
                     ),
                     TextField(
+                      style: TextStyle(
+                        color: Colors.white,
+                      ),
+
                       onChanged: (val) {
                         userEmail = val;
                       },
@@ -67,6 +75,10 @@ class _SignUpState extends State<SignUp> {
                       height: MediaQuery.of(context).size.height * .02,
                     ),
                     TextField(
+                      style: TextStyle(
+                        color: Colors.white,
+                      ),
+
                       onChanged: (val) {
                         userSID = val;
                       },
@@ -77,6 +89,10 @@ class _SignUpState extends State<SignUp> {
                       height: MediaQuery.of(context).size.height * .02,
                     ),
                     TextField(
+                      style: TextStyle(
+                        color: Colors.white,
+                      ),
+
                       onChanged: (val) {
                         userSPass = val;
                       },

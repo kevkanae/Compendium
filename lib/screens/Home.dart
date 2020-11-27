@@ -41,6 +41,10 @@ class _HomeState extends State<Home> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       TextField(
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
+
                         onChanged: (val) {
                           userEmail = val;
                         },
@@ -51,6 +55,10 @@ class _HomeState extends State<Home> {
                         height: MediaQuery.of(context).size.height * .02,
                       ),
                       TextField(
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
+
                         onChanged: (val) {
                           userPass = val;
                         },

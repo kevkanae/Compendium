@@ -2,6 +2,9 @@ import 'dart:async';
 import 'package:compendium/BackEnd.dart';
 import 'package:compendium/screens/Display.dart';
 import 'package:flutter/material.dart';
+import 'package:http/http.dart';
+
+import '../Constants.dart';
 
 //--------------------------------------------------------//--//--------------------------------------------------------//
 
@@ -10,7 +13,7 @@ class Search extends StatefulWidget {
   _SearchState createState() => _SearchState();
 }
 
-//--------------------------------------------------------//--/--------------------------------------------------------//
+//--------------------------------------------------------//--//--------------------------------------------------------//
 
 class _SearchState extends State<Search> {
   String drugName;
@@ -33,22 +36,11 @@ class _SearchState extends State<Search> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     TextField(
-                      decoration: InputDecoration(
-                        hintText: "Enter Drug Name",
-                        hintStyle: TextStyle(
-                          color: Colors.white,
-                        ),
-                        filled: true,
-                        fillColor: Color(0xff6c5b7b),
-                        enabledBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: Colors.white),
-                          borderRadius: BorderRadius.circular(25.0),
-                        ),
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(25.0),
-                          borderSide: BorderSide(color: Colors.white),
-                        ),
+                      style: TextStyle(
+                        color: Colors.white,
                       ),
+
+                      decoration: textFieldDec.copyWith(labelText: 'Enter Drug Name'),
                       onChanged: (val) {
                         setState(() {
                           drugName = val;
@@ -59,10 +51,11 @@ class _SearchState extends State<Search> {
                       height: MediaQuery.of(context).size.height * .02,
                     ),
                     FlatButton(
-                        onPressed: () {
-                          OpenFDA(query: drugName);
+                        onPressed: () async {
+                          Response dataNew = await OpenFDA(query: drugName).one();
+                          Response dataNew1 = await OpenFDA(query: drugName).two();
                           Navigator.of(context).push(MaterialPageRoute(
-                              builder: (BuildContext context) => Splash2()));
+                              builder: (BuildContext context) => Splash2(response: dataNew,response1: dataNew1,)));
                         },
                         child: Text('Search'))
                   ],
@@ -77,6 +70,10 @@ class _SearchState extends State<Search> {
 //--------------------------------------------------------////--------------------------------------------------------//
 
 class Splash2 extends StatefulWidget {
+  final Response response;
+  final Response response1;
+  Splash2({this.response,this.response1});
+
   @override
   _Splash2State createState() => _Splash2State();
 }
@@ -86,9 +83,9 @@ class _Splash2State extends State<Splash2> {
   void initState() {
     super.initState();
     Timer(
-        Duration(seconds: 5),
+        Duration(seconds: 3),
         () => Navigator.of(context).pushReplacement(
-            MaterialPageRoute(builder: (BuildContext context) => Display())));
+            MaterialPageRoute(builder: (BuildContext context) => Display(displayResponse: widget.response,displayResponse1: widget.response1,))));
   }
 
   Widget build(BuildContext context) {
