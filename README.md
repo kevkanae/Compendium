@@ -28,4 +28,4 @@ A new Flutter project, that is a search engine for medicinal drugs that displays
       <td><img src="https://github.com/kevkanae/compendium/blob/main/extra/4.png" alt="App SS" width="300" height="550" /></td>
     </tr>
   </table>
-----
+
