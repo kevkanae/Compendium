@@ -2,18 +2,7 @@
 
 A new Flutter project, that is a search engine for medicinal drugs that displays data directly from [FDA](https://open.fda.gov/)
 
-## Project Milestones
-
-| Milestones                     | Progress |
-| ------------------------------ | -------- |
-| Firebase/Firestore Integration | ✔        |
-| Login/Sign-Up                  | ✔        |
-| 2 Seperate API Calls           | ✔        |
-| Data Display                   | ✔        |
-| JSON Decode                    | ✔        |
-| Use Firestore as DB for Info   | ❌       |
-| Code Refactors                 | ❌       |
-| UI remake                      | ❌       |
+<img src="https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white" alt="Flutter"/> <img src="https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white" alt="Docker"/> <img src="https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white" alt="Dart"/>
 
 ### Screenshots:
 
